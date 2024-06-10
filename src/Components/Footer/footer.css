@@ -1,0 +1,185 @@
+:root{
+    --PrimaryColor: hsl(199,100%,33%);
+    --SecondaryColor:hsl(187,85%,43%);
+    --gradientColor:linear-gradient(to right, hsl(187,85%,43%),hsl(199,100%,33%));
+    --whiteColor:hsl(0,0%,100%);
+    --blackColor:hsl(201,33%,16%);
+    --textColor:hsl(240,4%,36%);
+    --whiteColorDeam:hsl(0,0%,93%);
+    --greyText:rgb(190,190,190);
+    --inputColor:rgb(239,239,239);
+    --bodyColor:rgb(240,240,240);
+    --cardBg:rgb(235,235,235);
+}
+
+.footer{
+    width: 100%;
+    position: relative;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.videoDiv{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    &::after{
+        content: '';
+        position: absolute;
+        background: rgba(10,84,107,0.307);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        mix-blend-mode: multiply;
+    }
+
+}
+.videoDiv video{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.footer .secContent{
+    width: 100%;
+    height: min-content;
+    padding: 2rem initial;
+    margin: auto;
+    row-gap: 2rem;
+    z-index: 1000;
+}
+.secContent .contactDiv{
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+}
+.contactDiv .text small{
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--whiteColor);
+}
+.text h2{
+    color: var(--whiteColor);
+    font-size: 1.8rem;
+}
+.contactDiv .inputDiv{
+    width: 100%;
+    gap: 1rem;
+  flex-direction: column;
+
+}
+.contactDiv .inputDiv input{
+    border-radius: 10px;
+    border: 1px solid var(--whiteColor);
+    padding: .5rem 6rem;
+    background: none;
+    color: var(--whiteColor);
+    outline: none;
+
+    &::placeholder{
+        color: var(--whiteColor);
+        opacity: .5;
+    }
+}
+.inputDiv .btn{
+    padding: .6rem 3rem;
+    color: var(--whiteColor);
+    gap: .5rem;
+    
+}
+.inputDiv .btn .icon{
+    font-size: 20px;
+    margin-top: -10px; 
+
+}
+.footerCard{
+    position: relative;
+    padding: 1rem 1rem 4rem;
+    background: var(--whiteColor);
+    gap: 2rem;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    flex-direction: column;
+    margin-top: 13px;
+}
+.footerIntro{
+    flex-direction: column;
+    flex-basis: 50%;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+.footer .logoDiv .logo{
+   color: var(--blackColor);
+   font-weight: 600;
+}
+a .icon{
+   color: var(--PrimaryColor)!important;
+   margin-right:10px ;
+   font-size: 25px;
+}
+.footerParagraph{
+    font-size: 13px;
+}
+.footerSocial{
+    column-gap: .5rem;
+}
+.footerSocial .icon{
+    font-size: 20px;
+    &:hover{
+        color: var(--PrimaryColor);
+    }
+}
+.footerLinks{
+     flex-basis: 50%;
+     width: 100%;
+     gap:1rem;
+     grid-template-columns: repeat(2, 1fr);
+     justify-content: space-between;
+
+}
+.linkGroup .groupTitle{
+    display: block;
+    font-weight: 600;
+    color: var(--blackColor);
+    margin-bottom: .5rem;
+}
+.footerList{
+    font-size: 15px;
+    color: var(--textColor);
+    transition: .3s ease-in-out;
+
+    &:hover{
+        color: var(--PrimaryColor);
+        transform: translateX(7px);
+    }
+}
+.footerList .icon{
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: var(--blackColor);
+}
+.footerDiv{
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--SecondaryColor);
+    padding: .5rem 2rem;
+}
+.footerDiv small{
+    color: var(--whiteColor);
+}
+
+@media screen and (min-width:500px) {
+    .footer .footerLinks{
+        grid-template-columns: repeat(3,1fr);
+    }
+}

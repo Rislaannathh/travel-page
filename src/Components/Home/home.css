@@ -1,0 +1,203 @@
+:root{
+    --PrimaryColor: hsl(199,100%,33%);
+    --SecondaryColor:hsl(187,85%,43%);
+    --gradientColor:linear-gradient(to right, hsl(187,85%,43%),hsl(199,100%,33%));
+    --whiteColor:hsl(0,0%,100%);
+    --blackColor:hsl(201,33%,16%);
+    --textColor:hsl(240,4%,36%);
+    --whiteColorDeam:hsl(0,0%,93%);
+    --greyText:rgb(190,190,190);
+    --inputColor:rgb(239,239,239);
+    --bodyColor:rgb(240,240,240);
+    --cardBg:rgb(235,235,235);
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    position: relative;
+}
+
+.home .overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(47,106,127);
+    top:0;
+    bottom: 0;
+    z-index: 1;
+     mix-blend-mode: hard-light; 
+
+}
+.home video{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    bottom: 0;
+    object-fit: cover;
+} 
+.home .homeContent{
+    width: 100%;
+    height: max-content;
+    padding: 8rem 1.5rem 3rem;
+    display: flex;
+    row-gap: 3rem;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: auto;
+    color: var(--whiteColor);
+    z-index: 100;
+   
+
+
+}
+.home .textDiv{
+    padding: 2rem 0;
+
+}
+.home .smallText{
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.home .homeTitle{
+    position: relative;
+    font-size: 1.8rem;
+} 
+.home .cardDiv{
+    position: relative;
+    padding: 2REM 1rem;
+    background: var(--whiteColor);
+    border-radius: 10px;
+    gap: 1rem;
+}
+.home label{
+    display: block;
+    padding-bottom:10px;
+    color: var(--textColor);
+    font-size: 13px;
+    font-weight: 500;
+}
+.home .label_total{
+
+    justify-content: space-between;
+    align-items: center;
+}
+.home .total{
+    color: var(--textColor);
+    font-size: 18px;
+    padding-bottom:10px;
+
+}
+.home .priceInput .input{
+    height: 40px;
+    padding: 0 1rem;
+    background: var(--inputColor);
+    border-radius: 3rem;     
+}
+.home input{
+    background: none;
+    border-radius: 3rem;
+    border: none;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+   
+}
+.home input  &::placeholder{
+    font-size: 13px;
+}
+.home .icon{
+   font-size: 18px;
+   color: var(--blackColor)
+   !important;
+   margin-left: 10px;
+   cursor: pointer;
+   margin-top:-8px;
+}
+.home .searchOptions{
+    background: var(--gradientColor);
+    position: absolute;
+    width: max-content;
+    bottom: -0.7rem;
+    column-gap: .8rem;
+    padding: 5px 1rem;
+    border-radius: 3rem;
+    left: 50%;
+    transform: translate(-50%);
+    justify-content: center;
+   
+   cursor: pointer;
+
+
+}
+.home .searchOptions &:hover{
+    background: var(--PrimaryColor);
+}
+.home .searchOptions .icon{
+    font-size: 18px;
+   color: var(--whiteColor)
+   !important;
+   margin-left: 6px;
+   cursor: pointer;
+   margin-top:-9px;
+}
+.home .homeFooterIcon{
+    width: 100%;
+    justify-content: space-between;
+}
+.home .homeFooterIcon .icon{
+    font-size: 20px;
+    margin: 0 5px;
+    color: var(--whiteColor)!important;
+    font-weight: 600;
+
+    &::hover{
+        color: var(--PrimaryColor);
+    }
+}
+
+
+@media screen and (min-width:500px){
+    .home .textDiv .smallText{
+          font-size: 16px;
+    }
+    .homeTitle{
+        position: relative;
+        font-size: 2.3rem;
+        width: max-content;
+        &::after{
+            position: absolute;
+            content: '';
+            height: 5px;
+            width: 145px;
+            right: 0px;
+            left: 5px;
+            z-index: -1;
+        }
+    }
+    .cardDiv{
+         grid-template-columns: repeat(2,1fr);
+         margin-bottom: 100px;
+    }
+    
+}
+
+@media screen and (min-width:600px) {
+    .cardDiv{
+        
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media screen and (min-width:940) {
+    .home{
+        height: 70vh;
+    }
+    
+}
